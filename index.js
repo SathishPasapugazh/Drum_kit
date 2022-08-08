@@ -46,3 +46,6 @@ crash.play();
 
 
 
+document.addEventListener("keydown", function(){
+     alert("keypressed");
+});
