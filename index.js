@@ -7,11 +7,13 @@ function handleClick() {
 
  var key= this.innerHTML; 
 makeSound(key);
+buttonAnimation(key);
  
 }
 
 document.addEventListener("keydown", function (event) {
-makeSound(event.key);     
+makeSound(event.key); 
+buttonAnimation(event.key);    
 });
 
 
@@ -51,4 +53,14 @@ crash.play();
    
      break;
  }
+}
+
+
+function buttonAnimation(key) {
+    var activeButton= document.querySelector("."+key);
+    activeButton.classList.add("pressed");
+
+    setTimeout(() => {
+         activeButton.classList.remove("pressed");
+    }, 100);
 }
