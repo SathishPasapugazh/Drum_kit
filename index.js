@@ -49,7 +49,7 @@ crash.play();
      break;
  
    default:
-   console.log(this.innerHTML);
+   //console.log(this.innerHTML);
    
      break;
  }
